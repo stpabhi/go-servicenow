@@ -3,6 +3,846 @@
 package servicenow
 
 // GetActive returns the Active field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetActive() string {
+	if c == nil || c.Active == nil {
+		return ""
+	}
+	return *c.Active
+}
+
+// GetActivityDue returns the ActivityDue field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetActivityDue() string {
+	if c == nil || c.ActivityDue == nil {
+		return ""
+	}
+	return *c.ActivityDue
+}
+
+// GetAdditionalAssigneeList returns the AdditionalAssigneeList field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetAdditionalAssigneeList() string {
+	if c == nil || c.AdditionalAssigneeList == nil {
+		return ""
+	}
+	return *c.AdditionalAssigneeList
+}
+
+// GetApproval returns the Approval field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetApproval() string {
+	if c == nil || c.Approval == nil {
+		return ""
+	}
+	return *c.Approval
+}
+
+// GetApprovalHistory returns the ApprovalHistory field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetApprovalHistory() string {
+	if c == nil || c.ApprovalHistory == nil {
+		return ""
+	}
+	return *c.ApprovalHistory
+}
+
+// GetApprovalSet returns the ApprovalSet field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetApprovalSet() string {
+	if c == nil || c.ApprovalSet == nil {
+		return ""
+	}
+	return *c.ApprovalSet
+}
+
+// GetAssignedTo returns the AssignedTo field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetAssignedTo() string {
+	if c == nil || c.AssignedTo == nil {
+		return ""
+	}
+	return *c.AssignedTo
+}
+
+// GetAssignmentGroup returns the AssignmentGroup field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetAssignmentGroup() string {
+	if c == nil || c.AssignmentGroup == nil {
+		return ""
+	}
+	return *c.AssignmentGroup
+}
+
+// GetBackoutPlan returns the BackoutPlan field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetBackoutPlan() string {
+	if c == nil || c.BackoutPlan == nil {
+		return ""
+	}
+	return *c.BackoutPlan
+}
+
+// GetBusinessDuration returns the BusinessDuration field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetBusinessDuration() string {
+	if c == nil || c.BusinessDuration == nil {
+		return ""
+	}
+	return *c.BusinessDuration
+}
+
+// GetBusinessService returns the BusinessService field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetBusinessService() string {
+	if c == nil || c.BusinessService == nil {
+		return ""
+	}
+	return *c.BusinessService
+}
+
+// GetCabDate returns the CabDate field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCabDate() string {
+	if c == nil || c.CabDate == nil {
+		return ""
+	}
+	return *c.CabDate
+}
+
+// GetCabDelegate returns the CabDelegate field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCabDelegate() string {
+	if c == nil || c.CabDelegate == nil {
+		return ""
+	}
+	return *c.CabDelegate
+}
+
+// GetCabRecommendation returns the CabRecommendation field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCabRecommendation() string {
+	if c == nil || c.CabRecommendation == nil {
+		return ""
+	}
+	return *c.CabRecommendation
+}
+
+// GetCabRequired returns the CabRequired field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCabRequired() string {
+	if c == nil || c.CabRequired == nil {
+		return ""
+	}
+	return *c.CabRequired
+}
+
+// GetCalendarDuration returns the CalendarDuration field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCalendarDuration() string {
+	if c == nil || c.CalendarDuration == nil {
+		return ""
+	}
+	return *c.CalendarDuration
+}
+
+// GetCategory returns the Category field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCategory() string {
+	if c == nil || c.Category == nil {
+		return ""
+	}
+	return *c.Category
+}
+
+// GetChangePlan returns the ChangePlan field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetChangePlan() string {
+	if c == nil || c.ChangePlan == nil {
+		return ""
+	}
+	return *c.ChangePlan
+}
+
+// GetChgModel returns the ChgModel field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetChgModel() string {
+	if c == nil || c.ChgModel == nil {
+		return ""
+	}
+	return *c.ChgModel
+}
+
+// GetCloseCode returns the CloseCode field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCloseCode() string {
+	if c == nil || c.CloseCode == nil {
+		return ""
+	}
+	return *c.CloseCode
+}
+
+// GetClosedAt returns the ClosedAt field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetClosedAt() string {
+	if c == nil || c.ClosedAt == nil {
+		return ""
+	}
+	return *c.ClosedAt
+}
+
+// GetClosedBy returns the ClosedBy field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetClosedBy() string {
+	if c == nil || c.ClosedBy == nil {
+		return ""
+	}
+	return *c.ClosedBy
+}
+
+// GetCloseNotes returns the CloseNotes field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCloseNotes() string {
+	if c == nil || c.CloseNotes == nil {
+		return ""
+	}
+	return *c.CloseNotes
+}
+
+// GetCmdbCi returns the CmdbCi field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCmdbCi() string {
+	if c == nil || c.CmdbCi == nil {
+		return ""
+	}
+	return *c.CmdbCi
+}
+
+// GetComments returns the Comments field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetComments() string {
+	if c == nil || c.Comments == nil {
+		return ""
+	}
+	return *c.Comments
+}
+
+// GetCommentsAndWorkNotes returns the CommentsAndWorkNotes field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCommentsAndWorkNotes() string {
+	if c == nil || c.CommentsAndWorkNotes == nil {
+		return ""
+	}
+	return *c.CommentsAndWorkNotes
+}
+
+// GetCompany returns the Company field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCompany() string {
+	if c == nil || c.Company == nil {
+		return ""
+	}
+	return *c.Company
+}
+
+// GetConflictLastRun returns the ConflictLastRun field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetConflictLastRun() string {
+	if c == nil || c.ConflictLastRun == nil {
+		return ""
+	}
+	return *c.ConflictLastRun
+}
+
+// GetConflictStatus returns the ConflictStatus field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetConflictStatus() string {
+	if c == nil || c.ConflictStatus == nil {
+		return ""
+	}
+	return *c.ConflictStatus
+}
+
+// GetContactType returns the ContactType field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetContactType() string {
+	if c == nil || c.ContactType == nil {
+		return ""
+	}
+	return *c.ContactType
+}
+
+// GetCorrelationDisplay returns the CorrelationDisplay field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCorrelationDisplay() string {
+	if c == nil || c.CorrelationDisplay == nil {
+		return ""
+	}
+	return *c.CorrelationDisplay
+}
+
+// GetCorrelationID returns the CorrelationID field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetCorrelationID() string {
+	if c == nil || c.CorrelationID == nil {
+		return ""
+	}
+	return *c.CorrelationID
+}
+
+// GetDescription returns the Description field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetDescription() string {
+	if c == nil || c.Description == nil {
+		return ""
+	}
+	return *c.Description
+}
+
+// GetDueDate returns the DueDate field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetDueDate() string {
+	if c == nil || c.DueDate == nil {
+		return ""
+	}
+	return *c.DueDate
+}
+
+// GetEndDate returns the EndDate field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetEndDate() string {
+	if c == nil || c.EndDate == nil {
+		return ""
+	}
+	return *c.EndDate
+}
+
+// GetEscalation returns the Escalation field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetEscalation() string {
+	if c == nil || c.Escalation == nil {
+		return ""
+	}
+	return *c.Escalation
+}
+
+// GetExpectedStart returns the ExpectedStart field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetExpectedStart() string {
+	if c == nil || c.ExpectedStart == nil {
+		return ""
+	}
+	return *c.ExpectedStart
+}
+
+// GetFollowUp returns the FollowUp field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetFollowUp() string {
+	if c == nil || c.FollowUp == nil {
+		return ""
+	}
+	return *c.FollowUp
+}
+
+// GetGroupList returns the GroupList field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetGroupList() string {
+	if c == nil || c.GroupList == nil {
+		return ""
+	}
+	return *c.GroupList
+}
+
+// GetImpact returns the Impact field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetImpact() string {
+	if c == nil || c.Impact == nil {
+		return ""
+	}
+	return *c.Impact
+}
+
+// GetImplementationPlan returns the ImplementationPlan field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetImplementationPlan() string {
+	if c == nil || c.ImplementationPlan == nil {
+		return ""
+	}
+	return *c.ImplementationPlan
+}
+
+// GetJustification returns the Justification field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetJustification() string {
+	if c == nil || c.Justification == nil {
+		return ""
+	}
+	return *c.Justification
+}
+
+// GetKnowledge returns the Knowledge field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetKnowledge() string {
+	if c == nil || c.Knowledge == nil {
+		return ""
+	}
+	return *c.Knowledge
+}
+
+// GetLocation returns the Location field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetLocation() string {
+	if c == nil || c.Location == nil {
+		return ""
+	}
+	return *c.Location
+}
+
+// GetMadeSLA returns the MadeSLA field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetMadeSLA() string {
+	if c == nil || c.MadeSLA == nil {
+		return ""
+	}
+	return *c.MadeSLA
+}
+
+// GetNumber returns the Number field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetNumber() string {
+	if c == nil || c.Number == nil {
+		return ""
+	}
+	return *c.Number
+}
+
+// GetOnHold returns the OnHold field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetOnHold() string {
+	if c == nil || c.OnHold == nil {
+		return ""
+	}
+	return *c.OnHold
+}
+
+// GetOnHoldReason returns the OnHoldReason field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetOnHoldReason() string {
+	if c == nil || c.OnHoldReason == nil {
+		return ""
+	}
+	return *c.OnHoldReason
+}
+
+// GetOnHoldTask returns the OnHoldTask field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetOnHoldTask() string {
+	if c == nil || c.OnHoldTask == nil {
+		return ""
+	}
+	return *c.OnHoldTask
+}
+
+// GetOpenedAt returns the OpenedAt field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetOpenedAt() string {
+	if c == nil || c.OpenedAt == nil {
+		return ""
+	}
+	return *c.OpenedAt
+}
+
+// GetOpenedBy returns the OpenedBy field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetOpenedBy() string {
+	if c == nil || c.OpenedBy == nil {
+		return ""
+	}
+	return *c.OpenedBy
+}
+
+// GetOrder returns the Order field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetOrder() string {
+	if c == nil || c.Order == nil {
+		return ""
+	}
+	return *c.Order
+}
+
+// GetOutsideMaintenanceSchedule returns the OutsideMaintenanceSchedule field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetOutsideMaintenanceSchedule() string {
+	if c == nil || c.OutsideMaintenanceSchedule == nil {
+		return ""
+	}
+	return *c.OutsideMaintenanceSchedule
+}
+
+// GetParent returns the Parent field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetParent() string {
+	if c == nil || c.Parent == nil {
+		return ""
+	}
+	return *c.Parent
+}
+
+// GetPhase returns the Phase field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetPhase() string {
+	if c == nil || c.Phase == nil {
+		return ""
+	}
+	return *c.Phase
+}
+
+// GetPhaseState returns the PhaseState field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetPhaseState() string {
+	if c == nil || c.PhaseState == nil {
+		return ""
+	}
+	return *c.PhaseState
+}
+
+// GetPriority returns the Priority field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetPriority() string {
+	if c == nil || c.Priority == nil {
+		return ""
+	}
+	return *c.Priority
+}
+
+// GetProductionSystem returns the ProductionSystem field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetProductionSystem() string {
+	if c == nil || c.ProductionSystem == nil {
+		return ""
+	}
+	return *c.ProductionSystem
+}
+
+// GetReason returns the Reason field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetReason() string {
+	if c == nil || c.Reason == nil {
+		return ""
+	}
+	return *c.Reason
+}
+
+// GetReassignmentCount returns the ReassignmentCount field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetReassignmentCount() string {
+	if c == nil || c.ReassignmentCount == nil {
+		return ""
+	}
+	return *c.ReassignmentCount
+}
+
+// GetRequestedBy returns the RequestedBy field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetRequestedBy() string {
+	if c == nil || c.RequestedBy == nil {
+		return ""
+	}
+	return *c.RequestedBy
+}
+
+// GetRequestedByDate returns the RequestedByDate field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetRequestedByDate() string {
+	if c == nil || c.RequestedByDate == nil {
+		return ""
+	}
+	return *c.RequestedByDate
+}
+
+// GetReviewComments returns the ReviewComments field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetReviewComments() string {
+	if c == nil || c.ReviewComments == nil {
+		return ""
+	}
+	return *c.ReviewComments
+}
+
+// GetReviewDate returns the ReviewDate field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetReviewDate() string {
+	if c == nil || c.ReviewDate == nil {
+		return ""
+	}
+	return *c.ReviewDate
+}
+
+// GetReviewStatus returns the ReviewStatus field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetReviewStatus() string {
+	if c == nil || c.ReviewStatus == nil {
+		return ""
+	}
+	return *c.ReviewStatus
+}
+
+// GetRisk returns the Risk field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetRisk() string {
+	if c == nil || c.Risk == nil {
+		return ""
+	}
+	return *c.Risk
+}
+
+// GetRiskImpactAnalysis returns the RiskImpactAnalysis field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetRiskImpactAnalysis() string {
+	if c == nil || c.RiskImpactAnalysis == nil {
+		return ""
+	}
+	return *c.RiskImpactAnalysis
+}
+
+// GetRiskValue returns the RiskValue field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetRiskValue() string {
+	if c == nil || c.RiskValue == nil {
+		return ""
+	}
+	return *c.RiskValue
+}
+
+// GetRouteReason returns the RouteReason field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetRouteReason() string {
+	if c == nil || c.RouteReason == nil {
+		return ""
+	}
+	return *c.RouteReason
+}
+
+// GetScope returns the Scope field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetScope() string {
+	if c == nil || c.Scope == nil {
+		return ""
+	}
+	return *c.Scope
+}
+
+// GetServiceOffering returns the ServiceOffering field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetServiceOffering() string {
+	if c == nil || c.ServiceOffering == nil {
+		return ""
+	}
+	return *c.ServiceOffering
+}
+
+// GetShortDescription returns the ShortDescription field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetShortDescription() string {
+	if c == nil || c.ShortDescription == nil {
+		return ""
+	}
+	return *c.ShortDescription
+}
+
+// GetSkills returns the Skills field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSkills() string {
+	if c == nil || c.Skills == nil {
+		return ""
+	}
+	return *c.Skills
+}
+
+// GetSLADue returns the SLADue field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSLADue() string {
+	if c == nil || c.SLADue == nil {
+		return ""
+	}
+	return *c.SLADue
+}
+
+// GetSnEsignDocument returns the SnEsignDocument field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSnEsignDocument() string {
+	if c == nil || c.SnEsignDocument == nil {
+		return ""
+	}
+	return *c.SnEsignDocument
+}
+
+// GetSnEsignEsignatureConfiguration returns the SnEsignEsignatureConfiguration field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSnEsignEsignatureConfiguration() string {
+	if c == nil || c.SnEsignEsignatureConfiguration == nil {
+		return ""
+	}
+	return *c.SnEsignEsignatureConfiguration
+}
+
+// GetStartDate returns the StartDate field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetStartDate() string {
+	if c == nil || c.StartDate == nil {
+		return ""
+	}
+	return *c.StartDate
+}
+
+// GetState returns the State field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetState() string {
+	if c == nil || c.State == nil {
+		return ""
+	}
+	return *c.State
+}
+
+// GetStatus returns the Status field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetStatus() string {
+	if c == nil || c.Status == nil {
+		return ""
+	}
+	return *c.Status
+}
+
+// GetStdChangeProducerVersion returns the StdChangeProducerVersion field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetStdChangeProducerVersion() string {
+	if c == nil || c.StdChangeProducerVersion == nil {
+		return ""
+	}
+	return *c.StdChangeProducerVersion
+}
+
+// GetSysClassName returns the SysClassName field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysClassName() string {
+	if c == nil || c.SysClassName == nil {
+		return ""
+	}
+	return *c.SysClassName
+}
+
+// GetSysCreatedBy returns the SysCreatedBy field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysCreatedBy() string {
+	if c == nil || c.SysCreatedBy == nil {
+		return ""
+	}
+	return *c.SysCreatedBy
+}
+
+// GetSysCreatedOn returns the SysCreatedOn field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysCreatedOn() string {
+	if c == nil || c.SysCreatedOn == nil {
+		return ""
+	}
+	return *c.SysCreatedOn
+}
+
+// GetSysDomain returns the SysDomain field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysDomain() string {
+	if c == nil || c.SysDomain == nil {
+		return ""
+	}
+	return *c.SysDomain
+}
+
+// GetSysDomainPath returns the SysDomainPath field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysDomainPath() string {
+	if c == nil || c.SysDomainPath == nil {
+		return ""
+	}
+	return *c.SysDomainPath
+}
+
+// GetSysID returns the SysID field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysID() string {
+	if c == nil || c.SysID == nil {
+		return ""
+	}
+	return *c.SysID
+}
+
+// GetSysModCount returns the SysModCount field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysModCount() string {
+	if c == nil || c.SysModCount == nil {
+		return ""
+	}
+	return *c.SysModCount
+}
+
+// GetSysTags returns the SysTags field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysTags() string {
+	if c == nil || c.SysTags == nil {
+		return ""
+	}
+	return *c.SysTags
+}
+
+// GetSysUpdatedBy returns the SysUpdatedBy field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysUpdatedBy() string {
+	if c == nil || c.SysUpdatedBy == nil {
+		return ""
+	}
+	return *c.SysUpdatedBy
+}
+
+// GetSysUpdatedOn returns the SysUpdatedOn field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetSysUpdatedOn() string {
+	if c == nil || c.SysUpdatedOn == nil {
+		return ""
+	}
+	return *c.SysUpdatedOn
+}
+
+// GetTaskEffectiveNumber returns the TaskEffectiveNumber field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetTaskEffectiveNumber() string {
+	if c == nil || c.TaskEffectiveNumber == nil {
+		return ""
+	}
+	return *c.TaskEffectiveNumber
+}
+
+// GetTestPlan returns the TestPlan field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetTestPlan() string {
+	if c == nil || c.TestPlan == nil {
+		return ""
+	}
+	return *c.TestPlan
+}
+
+// GetTimeWorked returns the TimeWorked field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetTimeWorked() string {
+	if c == nil || c.TimeWorked == nil {
+		return ""
+	}
+	return *c.TimeWorked
+}
+
+// GetType returns the Type field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetType() string {
+	if c == nil || c.Type == nil {
+		return ""
+	}
+	return *c.Type
+}
+
+// GetUnauthorized returns the Unauthorized field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetUnauthorized() string {
+	if c == nil || c.Unauthorized == nil {
+		return ""
+	}
+	return *c.Unauthorized
+}
+
+// GetUniversalRequest returns the UniversalRequest field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetUniversalRequest() string {
+	if c == nil || c.UniversalRequest == nil {
+		return ""
+	}
+	return *c.UniversalRequest
+}
+
+// GetUponApproval returns the UponApproval field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetUponApproval() string {
+	if c == nil || c.UponApproval == nil {
+		return ""
+	}
+	return *c.UponApproval
+}
+
+// GetUponReject returns the UponReject field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetUponReject() string {
+	if c == nil || c.UponReject == nil {
+		return ""
+	}
+	return *c.UponReject
+}
+
+// GetUrgency returns the Urgency field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetUrgency() string {
+	if c == nil || c.Urgency == nil {
+		return ""
+	}
+	return *c.Urgency
+}
+
+// GetUserInput returns the UserInput field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetUserInput() string {
+	if c == nil || c.UserInput == nil {
+		return ""
+	}
+	return *c.UserInput
+}
+
+// GetWatchList returns the WatchList field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetWatchList() string {
+	if c == nil || c.WatchList == nil {
+		return ""
+	}
+	return *c.WatchList
+}
+
+// GetWorkEnd returns the WorkEnd field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetWorkEnd() string {
+	if c == nil || c.WorkEnd == nil {
+		return ""
+	}
+	return *c.WorkEnd
+}
+
+// GetWorkNotes returns the WorkNotes field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetWorkNotes() string {
+	if c == nil || c.WorkNotes == nil {
+		return ""
+	}
+	return *c.WorkNotes
+}
+
+// GetWorkNotesList returns the WorkNotesList field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetWorkNotesList() string {
+	if c == nil || c.WorkNotesList == nil {
+		return ""
+	}
+	return *c.WorkNotesList
+}
+
+// GetWorkStart returns the WorkStart field if it's non-nil, zero value otherwise.
+func (c *ChangeRequest) GetWorkStart() string {
+	if c == nil || c.WorkStart == nil {
+		return ""
+	}
+	return *c.WorkStart
+}
+
+// GetActive returns the Active field if it's non-nil, zero value otherwise.
 func (i *Incident) GetActive() string {
 	if i == nil || i.Active == nil {
 		return ""

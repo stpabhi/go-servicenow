@@ -37,7 +37,8 @@ type Client struct {
 	common service // Reuse a single struct instead of allocating one for each service on the heap.
 
 	// Services used for talking to different parts of the ServiceNow API.
-	Incidents *IncidentsService
+	Incidents      *IncidentsService
+	ChangeRequests *ChangeRequestsService
 }
 
 type service struct {
@@ -68,8 +69,31 @@ const (
 	DisplayValueAll   DisplayValueType = "all"
 )
 
+const (
+	Eq         OperandType = "="
+	Ne         OperandType = "!="
+	AND        OperandType = "^"
+	LOR        OperandType = "^OR"
+	LIKE       OperandType = "LIKE"
+	STARTSWITH OperandType = "STARTSWITH"
+	ENDSWITH   OperandType = "ENDSWITH"
+)
+
+type OperandType string
+
+type QueryOpts struct {
+	Key string
+	Op  OperandType
+	Val string
+}
+
 type ListOptions struct {
-	Limit string `url:"sysparm_record_count,omitempty"`
+	Limit        string           `url:"sysparm_record_count,omitempty"`
+	DisplayValue DisplayValueType `url:"displayvalue,omitempty"`
+
+	QueryOpts []QueryOpts `url:"-"`
+
+	internalFields
 }
 
 type GetOptions struct {
@@ -79,10 +103,14 @@ type GetOptions struct {
 }
 
 type CreateOptions struct {
+	DisplayValue DisplayValueType `url:"displayvalue,omitempty"`
+
 	internalFields
 }
 
 type UpdateOptions struct {
+	DisplayValue DisplayValueType `url:"displayvalue,omitempty"`
+
 	internalFields
 }
 
@@ -112,7 +140,7 @@ func addOptions(s string, opts interface{}) (string, error) {
 
 // NewClient returns a new ServiceNow API client. If a nil httpClient is
 // provided, a new http.Client will be used. To use API methods which require
-// authentication, provide an http.Client that will perform the authentication
+// authentication, provide a http.Client that will perform the authentication
 // for you (such as that provided by the golang.org/x/oauth2 library).
 func NewClient(baseURL string, httpClient *http.Client) (*Client, error) {
 	if httpClient == nil {
@@ -130,6 +158,7 @@ func NewClient(baseURL string, httpClient *http.Client) (*Client, error) {
 	c := &Client{client: httpClient, BaseURL: baseEndpoint, UserAgent: userAgent}
 	c.common.client = c
 	c.Incidents = (*IncidentsService)(&c.common)
+	c.ChangeRequests = (*ChangeRequestsService)(&c.common)
 	return c, nil
 }
 
