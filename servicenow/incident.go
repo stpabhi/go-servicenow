@@ -2,6 +2,7 @@ package servicenow
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"fmt"
 )
@@ -95,10 +96,27 @@ type Incident struct {
 	WorkNotes              *string `json:"work_notes,omitempty"`
 	WorkNotesList          *string `json:"work_notes_list,omitempty"`
 	WorkStart              *string `json:"work_start,omitempty"`
+
+	Extra map[string]string `json:"-"`
 }
 
 func (i Incident) String() string {
 	return Stringify(i)
+}
+
+func (i Incident) MarshalJSON() ([]byte, error) {
+	type incident Incident
+	b, _ := json.Marshal(incident(i))
+
+	var m map[string]json.RawMessage
+	_ = json.Unmarshal(b, &m)
+
+	for k, v := range i.Extra {
+		b, _ := json.Marshal(v)
+		m[k] = b
+	}
+
+	return json.Marshal(m)
 }
 
 // List incidents.
@@ -177,7 +195,7 @@ func (s *IncidentsService) Create(ctx context.Context, inc *Incident, opts Creat
 	}
 	resp, err := s.client.Do(ctx, req, &res)
 	if err != nil {
-		return nil, resp, nil
+		return nil, resp, err
 	}
 
 	resInc := &Incident{}
@@ -211,7 +229,7 @@ func (s *IncidentsService) Update(ctx context.Context, number string, inc *Incid
 	}
 	resp, err := s.client.Do(ctx, req, &res)
 	if err != nil {
-		return nil, resp, nil
+		return nil, resp, err
 	}
 
 	resInc := &Incident{}

@@ -37,8 +37,9 @@ type Client struct {
 	common service // Reuse a single struct instead of allocating one for each service on the heap.
 
 	// Services used for talking to different parts of the ServiceNow API.
-	Incidents      *IncidentsService
-	ChangeRequests *ChangeRequestsService
+	Incidents               *IncidentsService
+	ChangeRequests          *ChangeRequestsService
+	StandardChangeTemplates *StandardChangeTemplatesService
 }
 
 type service struct {
@@ -159,6 +160,7 @@ func NewClient(baseURL string, httpClient *http.Client) (*Client, error) {
 	c.common.client = c
 	c.Incidents = (*IncidentsService)(&c.common)
 	c.ChangeRequests = (*ChangeRequestsService)(&c.common)
+	c.StandardChangeTemplates = (*StandardChangeTemplatesService)(&c.common)
 	return c, nil
 }
 

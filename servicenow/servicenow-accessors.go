@@ -298,6 +298,14 @@ func (c *ChangeRequest) GetExpectedStart() string {
 	return *c.ExpectedStart
 }
 
+// GetExtra returns the Extra map if it's non-nil, an empty map otherwise.
+func (c *ChangeRequest) GetExtra() map[string]string {
+	if c == nil || c.Extra == nil {
+		return map[string]string{}
+	}
+	return c.Extra
+}
+
 // GetFollowUp returns the FollowUp field if it's non-nil, zero value otherwise.
 func (c *ChangeRequest) GetFollowUp() string {
 	if c == nil || c.FollowUp == nil {
@@ -1114,6 +1122,14 @@ func (i *Incident) GetExpectedStart() string {
 	return *i.ExpectedStart
 }
 
+// GetExtra returns the Extra map if it's non-nil, an empty map otherwise.
+func (i *Incident) GetExtra() map[string]string {
+	if i == nil || i.Extra == nil {
+		return map[string]string{}
+	}
+	return i.Extra
+}
+
 // GetFollowUp returns the FollowUp field if it's non-nil, zero value otherwise.
 func (i *Incident) GetFollowUp() string {
 	if i == nil || i.FollowUp == nil {
@@ -1504,4 +1520,644 @@ func (i *Incident) GetWorkStart() string {
 		return ""
 	}
 	return *i.WorkStart
+}
+
+// GetActive returns the Active field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetActive() string {
+	if s == nil || s.Active == nil {
+		return ""
+	}
+	return *s.Active
+}
+
+// GetActivityDue returns the ActivityDue field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetActivityDue() string {
+	if s == nil || s.ActivityDue == nil {
+		return ""
+	}
+	return *s.ActivityDue
+}
+
+// GetAdditionalAssigneeList returns the AdditionalAssigneeList field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetAdditionalAssigneeList() string {
+	if s == nil || s.AdditionalAssigneeList == nil {
+		return ""
+	}
+	return *s.AdditionalAssigneeList
+}
+
+// GetApproval returns the Approval field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetApproval() string {
+	if s == nil || s.Approval == nil {
+		return ""
+	}
+	return *s.Approval
+}
+
+// GetApprovalHistory returns the ApprovalHistory field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetApprovalHistory() string {
+	if s == nil || s.ApprovalHistory == nil {
+		return ""
+	}
+	return *s.ApprovalHistory
+}
+
+// GetApprovalSet returns the ApprovalSet field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetApprovalSet() string {
+	if s == nil || s.ApprovalSet == nil {
+		return ""
+	}
+	return *s.ApprovalSet
+}
+
+// GetAssignedTo returns the AssignedTo field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetAssignedTo() string {
+	if s == nil || s.AssignedTo == nil {
+		return ""
+	}
+	return *s.AssignedTo
+}
+
+// GetAssignmentGroup returns the AssignmentGroup field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetAssignmentGroup() string {
+	if s == nil || s.AssignmentGroup == nil {
+		return ""
+	}
+	return *s.AssignmentGroup
+}
+
+// GetBusinessDuration returns the BusinessDuration field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetBusinessDuration() string {
+	if s == nil || s.BusinessDuration == nil {
+		return ""
+	}
+	return *s.BusinessDuration
+}
+
+// GetBusinessJustification returns the BusinessJustification field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetBusinessJustification() string {
+	if s == nil || s.BusinessJustification == nil {
+		return ""
+	}
+	return *s.BusinessJustification
+}
+
+// GetBusinessService returns the BusinessService field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetBusinessService() string {
+	if s == nil || s.BusinessService == nil {
+		return ""
+	}
+	return *s.BusinessService
+}
+
+// GetCalendarDuration returns the CalendarDuration field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCalendarDuration() string {
+	if s == nil || s.CalendarDuration == nil {
+		return ""
+	}
+	return *s.CalendarDuration
+}
+
+// GetCatalog returns the Catalog field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCatalog() string {
+	if s == nil || s.Catalog == nil {
+		return ""
+	}
+	return *s.Catalog
+}
+
+// GetCategory returns the Category field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCategory() string {
+	if s == nil || s.Category == nil {
+		return ""
+	}
+	return *s.Category
+}
+
+// GetChangeRequests returns the ChangeRequests field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetChangeRequests() string {
+	if s == nil || s.ChangeRequests == nil {
+		return ""
+	}
+	return *s.ChangeRequests
+}
+
+// GetClosedAt returns the ClosedAt field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetClosedAt() string {
+	if s == nil || s.ClosedAt == nil {
+		return ""
+	}
+	return *s.ClosedAt
+}
+
+// GetClosedBy returns the ClosedBy field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetClosedBy() string {
+	if s == nil || s.ClosedBy == nil {
+		return ""
+	}
+	return *s.ClosedBy
+}
+
+// GetCloseNotes returns the CloseNotes field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCloseNotes() string {
+	if s == nil || s.CloseNotes == nil {
+		return ""
+	}
+	return *s.CloseNotes
+}
+
+// GetCmdbCi returns the CmdbCi field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCmdbCi() string {
+	if s == nil || s.CmdbCi == nil {
+		return ""
+	}
+	return *s.CmdbCi
+}
+
+// GetComments returns the Comments field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetComments() string {
+	if s == nil || s.Comments == nil {
+		return ""
+	}
+	return *s.Comments
+}
+
+// GetCommentsAndWorkNotes returns the CommentsAndWorkNotes field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCommentsAndWorkNotes() string {
+	if s == nil || s.CommentsAndWorkNotes == nil {
+		return ""
+	}
+	return *s.CommentsAndWorkNotes
+}
+
+// GetCompany returns the Company field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCompany() string {
+	if s == nil || s.Company == nil {
+		return ""
+	}
+	return *s.Company
+}
+
+// GetContactType returns the ContactType field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetContactType() string {
+	if s == nil || s.ContactType == nil {
+		return ""
+	}
+	return *s.ContactType
+}
+
+// GetCorrelationDisplay returns the CorrelationDisplay field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCorrelationDisplay() string {
+	if s == nil || s.CorrelationDisplay == nil {
+		return ""
+	}
+	return *s.CorrelationDisplay
+}
+
+// GetCorrelationID returns the CorrelationID field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCorrelationID() string {
+	if s == nil || s.CorrelationID == nil {
+		return ""
+	}
+	return *s.CorrelationID
+}
+
+// GetCreatedFromChange returns the CreatedFromChange field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetCreatedFromChange() string {
+	if s == nil || s.CreatedFromChange == nil {
+		return ""
+	}
+	return *s.CreatedFromChange
+}
+
+// GetDescription returns the Description field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetDescription() string {
+	if s == nil || s.Description == nil {
+		return ""
+	}
+	return *s.Description
+}
+
+// GetDueDate returns the DueDate field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetDueDate() string {
+	if s == nil || s.DueDate == nil {
+		return ""
+	}
+	return *s.DueDate
+}
+
+// GetEscalation returns the Escalation field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetEscalation() string {
+	if s == nil || s.Escalation == nil {
+		return ""
+	}
+	return *s.Escalation
+}
+
+// GetExpectedStart returns the ExpectedStart field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetExpectedStart() string {
+	if s == nil || s.ExpectedStart == nil {
+		return ""
+	}
+	return *s.ExpectedStart
+}
+
+// GetExtra returns the Extra map if it's non-nil, an empty map otherwise.
+func (s *StandardChangeTemplate) GetExtra() map[string]string {
+	if s == nil || s.Extra == nil {
+		return map[string]string{}
+	}
+	return s.Extra
+}
+
+// GetFollowUp returns the FollowUp field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetFollowUp() string {
+	if s == nil || s.FollowUp == nil {
+		return ""
+	}
+	return *s.FollowUp
+}
+
+// GetGroupList returns the GroupList field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetGroupList() string {
+	if s == nil || s.GroupList == nil {
+		return ""
+	}
+	return *s.GroupList
+}
+
+// GetImpact returns the Impact field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetImpact() string {
+	if s == nil || s.Impact == nil {
+		return ""
+	}
+	return *s.Impact
+}
+
+// GetKnowledge returns the Knowledge field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetKnowledge() string {
+	if s == nil || s.Knowledge == nil {
+		return ""
+	}
+	return *s.Knowledge
+}
+
+// GetLocation returns the Location field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetLocation() string {
+	if s == nil || s.Location == nil {
+		return ""
+	}
+	return *s.Location
+}
+
+// GetMadeSLA returns the MadeSLA field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetMadeSLA() string {
+	if s == nil || s.MadeSLA == nil {
+		return ""
+	}
+	return *s.MadeSLA
+}
+
+// GetNumber returns the Number field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetNumber() string {
+	if s == nil || s.Number == nil {
+		return ""
+	}
+	return *s.Number
+}
+
+// GetOpenedAt returns the OpenedAt field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetOpenedAt() string {
+	if s == nil || s.OpenedAt == nil {
+		return ""
+	}
+	return *s.OpenedAt
+}
+
+// GetOpenedBy returns the OpenedBy field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetOpenedBy() string {
+	if s == nil || s.OpenedBy == nil {
+		return ""
+	}
+	return *s.OpenedBy
+}
+
+// GetOrder returns the Order field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetOrder() string {
+	if s == nil || s.Order == nil {
+		return ""
+	}
+	return *s.Order
+}
+
+// GetParent returns the Parent field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetParent() string {
+	if s == nil || s.Parent == nil {
+		return ""
+	}
+	return *s.Parent
+}
+
+// GetPriority returns the Priority field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetPriority() string {
+	if s == nil || s.Priority == nil {
+		return ""
+	}
+	return *s.Priority
+}
+
+// GetProposalType returns the ProposalType field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetProposalType() string {
+	if s == nil || s.ProposalType == nil {
+		return ""
+	}
+	return *s.ProposalType
+}
+
+// GetReassignmentCount returns the ReassignmentCount field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetReassignmentCount() string {
+	if s == nil || s.ReassignmentCount == nil {
+		return ""
+	}
+	return *s.ReassignmentCount
+}
+
+// GetRouteReason returns the RouteReason field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetRouteReason() string {
+	if s == nil || s.RouteReason == nil {
+		return ""
+	}
+	return *s.RouteReason
+}
+
+// GetServiceOffering returns the ServiceOffering field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetServiceOffering() string {
+	if s == nil || s.ServiceOffering == nil {
+		return ""
+	}
+	return *s.ServiceOffering
+}
+
+// GetShortDescription returns the ShortDescription field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetShortDescription() string {
+	if s == nil || s.ShortDescription == nil {
+		return ""
+	}
+	return *s.ShortDescription
+}
+
+// GetSkills returns the Skills field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSkills() string {
+	if s == nil || s.Skills == nil {
+		return ""
+	}
+	return *s.Skills
+}
+
+// GetSLADue returns the SLADue field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSLADue() string {
+	if s == nil || s.SLADue == nil {
+		return ""
+	}
+	return *s.SLADue
+}
+
+// GetSnEsignDocument returns the SnEsignDocument field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSnEsignDocument() string {
+	if s == nil || s.SnEsignDocument == nil {
+		return ""
+	}
+	return *s.SnEsignDocument
+}
+
+// GetSnEsignEsignatureConfiguration returns the SnEsignEsignatureConfiguration field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSnEsignEsignatureConfiguration() string {
+	if s == nil || s.SnEsignEsignatureConfiguration == nil {
+		return ""
+	}
+	return *s.SnEsignEsignatureConfiguration
+}
+
+// GetState returns the State field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetState() string {
+	if s == nil || s.State == nil {
+		return ""
+	}
+	return *s.State
+}
+
+// GetStatus returns the Status field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetStatus() string {
+	if s == nil || s.Status == nil {
+		return ""
+	}
+	return *s.Status
+}
+
+// GetStdChangeProducer returns the StdChangeProducer field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetStdChangeProducer() string {
+	if s == nil || s.StdChangeProducer == nil {
+		return ""
+	}
+	return *s.StdChangeProducer
+}
+
+// GetStdChangeProducerVersion returns the StdChangeProducerVersion field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetStdChangeProducerVersion() string {
+	if s == nil || s.StdChangeProducerVersion == nil {
+		return ""
+	}
+	return *s.StdChangeProducerVersion
+}
+
+// GetSysClassName returns the SysClassName field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysClassName() string {
+	if s == nil || s.SysClassName == nil {
+		return ""
+	}
+	return *s.SysClassName
+}
+
+// GetSysCreatedBy returns the SysCreatedBy field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysCreatedBy() string {
+	if s == nil || s.SysCreatedBy == nil {
+		return ""
+	}
+	return *s.SysCreatedBy
+}
+
+// GetSysCreatedOn returns the SysCreatedOn field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysCreatedOn() string {
+	if s == nil || s.SysCreatedOn == nil {
+		return ""
+	}
+	return *s.SysCreatedOn
+}
+
+// GetSysDomain returns the SysDomain field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysDomain() string {
+	if s == nil || s.SysDomain == nil {
+		return ""
+	}
+	return *s.SysDomain
+}
+
+// GetSysDomainPath returns the SysDomainPath field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysDomainPath() string {
+	if s == nil || s.SysDomainPath == nil {
+		return ""
+	}
+	return *s.SysDomainPath
+}
+
+// GetSysID returns the SysID field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysID() string {
+	if s == nil || s.SysID == nil {
+		return ""
+	}
+	return *s.SysID
+}
+
+// GetSysModCount returns the SysModCount field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysModCount() string {
+	if s == nil || s.SysModCount == nil {
+		return ""
+	}
+	return *s.SysModCount
+}
+
+// GetSysTags returns the SysTags field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysTags() string {
+	if s == nil || s.SysTags == nil {
+		return ""
+	}
+	return *s.SysTags
+}
+
+// GetSysUpdatedBy returns the SysUpdatedBy field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysUpdatedBy() string {
+	if s == nil || s.SysUpdatedBy == nil {
+		return ""
+	}
+	return *s.SysUpdatedBy
+}
+
+// GetSysUpdatedOn returns the SysUpdatedOn field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetSysUpdatedOn() string {
+	if s == nil || s.SysUpdatedOn == nil {
+		return ""
+	}
+	return *s.SysUpdatedOn
+}
+
+// GetTaskEffectiveNumber returns the TaskEffectiveNumber field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetTaskEffectiveNumber() string {
+	if s == nil || s.TaskEffectiveNumber == nil {
+		return ""
+	}
+	return *s.TaskEffectiveNumber
+}
+
+// GetTemplateName returns the TemplateName field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetTemplateName() string {
+	if s == nil || s.TemplateName == nil {
+		return ""
+	}
+	return *s.TemplateName
+}
+
+// GetTemplateValue returns the TemplateValue field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetTemplateValue() string {
+	if s == nil || s.TemplateValue == nil {
+		return ""
+	}
+	return *s.TemplateValue
+}
+
+// GetTimeWorked returns the TimeWorked field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetTimeWorked() string {
+	if s == nil || s.TimeWorked == nil {
+		return ""
+	}
+	return *s.TimeWorked
+}
+
+// GetUniversalRequest returns the UniversalRequest field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetUniversalRequest() string {
+	if s == nil || s.UniversalRequest == nil {
+		return ""
+	}
+	return *s.UniversalRequest
+}
+
+// GetUponApproval returns the UponApproval field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetUponApproval() string {
+	if s == nil || s.UponApproval == nil {
+		return ""
+	}
+	return *s.UponApproval
+}
+
+// GetUponReject returns the UponReject field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetUponReject() string {
+	if s == nil || s.UponReject == nil {
+		return ""
+	}
+	return *s.UponReject
+}
+
+// GetUrgency returns the Urgency field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetUrgency() string {
+	if s == nil || s.Urgency == nil {
+		return ""
+	}
+	return *s.Urgency
+}
+
+// GetUserInput returns the UserInput field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetUserInput() string {
+	if s == nil || s.UserInput == nil {
+		return ""
+	}
+	return *s.UserInput
+}
+
+// GetWatchList returns the WatchList field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetWatchList() string {
+	if s == nil || s.WatchList == nil {
+		return ""
+	}
+	return *s.WatchList
+}
+
+// GetWorkEnd returns the WorkEnd field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetWorkEnd() string {
+	if s == nil || s.WorkEnd == nil {
+		return ""
+	}
+	return *s.WorkEnd
+}
+
+// GetWorkNotes returns the WorkNotes field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetWorkNotes() string {
+	if s == nil || s.WorkNotes == nil {
+		return ""
+	}
+	return *s.WorkNotes
+}
+
+// GetWorkNotesList returns the WorkNotesList field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetWorkNotesList() string {
+	if s == nil || s.WorkNotesList == nil {
+		return ""
+	}
+	return *s.WorkNotesList
+}
+
+// GetWorkStart returns the WorkStart field if it's non-nil, zero value otherwise.
+func (s *StandardChangeTemplate) GetWorkStart() string {
+	if s == nil || s.WorkStart == nil {
+		return ""
+	}
+	return *s.WorkStart
 }

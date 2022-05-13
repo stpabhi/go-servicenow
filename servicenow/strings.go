@@ -9,6 +9,7 @@ import (
 	"bytes"
 	"fmt"
 	"io"
+
 	"reflect"
 )
 
@@ -69,6 +70,9 @@ func stringifyValue(w io.Writer, val reflect.Value) {
 				continue
 			}
 			if fv.Kind() == reflect.Slice && fv.IsNil() {
+				continue
+			}
+			if fv.Kind() == reflect.Map && fv.IsNil() {
 				continue
 			}
 
